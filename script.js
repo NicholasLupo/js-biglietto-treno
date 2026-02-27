@@ -1,30 +1,37 @@
 // Dati utente
 let km = prompt('Inserisci il numero di chilometri che vuoi percorrere');
-console.log(km);
-const age = prompt('Inserisci la tua età');
-console.log(age);
+if (km == 0) {
 
-// Calcolo prezzo base
-let price = km * 0.21;
+    let km = prompt('Numero di chilometri invalido, per piacere riselezionare la distanza desiderata');
 
-// Calcolo biglietto base
-if (age >= 18 && age <= 64) {
+} else {
 
-    let priceFixed = price.toFixed(2);
-    console.log(priceFixed + '€');
+    console.log(km);
+    const age = prompt('Inserisci la tua età');
+    console.log(age);
 
-// Calcolo biglietto per minori
-} else if (age <= 17 && age > 0) {
+    // Calcolo prezzo base
+    let price = km * 0.21;
 
-    let sales = price - ((price * 20) / 100);
-    let salesFixed = sales.toFixed(2);
-    console.log(salesFixed + '€');
+    // Calcolo biglietto base
+    if (age >= 18 && age <= 64) {
 
-// Calcolo biglietto per over 65    
-} else if (age >= 65) {
+        let priceFixed = price.toFixed(2);
+        console.log(priceFixed + '€');
 
-    let sales = price - ((price * 40) / 100);
-    let salesFixed = sales.toFixed(2);
-    console.log(salesFixed + '€');
+    // Calcolo biglietto per minori
+    } else if (age <= 17 && age > 0) {
 
+        let sales = price - ((price * 20) / 100);
+        let salesFixed = sales.toFixed(2);
+        console.log(salesFixed + '€');
+
+    // Calcolo biglietto per over 65    
+    } else if (age >= 65) {
+
+        let sales = price - ((price * 40) / 100);
+        let salesFixed = sales.toFixed(2);
+        console.log(salesFixed + '€');
+
+    }
 }
