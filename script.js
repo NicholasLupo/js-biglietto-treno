@@ -6,4 +6,5 @@ console.log(age)
 
 // Calcolo biglietto base
 let price = km * 0.21
-console.log(price + '€')
+let priceFixed = price.toFixed(2);
+console.log(priceFixed + '€')
