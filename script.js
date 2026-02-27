@@ -5,12 +5,14 @@ const age = prompt('Inserisci la tua età');
 console.log(age)
 
 // Calcolo biglietto base
-let price = km * 0.21
-let priceFixed = price.toFixed(2);
-console.log(priceFixed + '€')
+if (age >= 18 & age <= 64) {
+
+    let price = km * 0.21
+    let priceFixed = price.toFixed(2);
+    console.log(priceFixed + '€')
 
 // Calcolo biglietto per minori
-if (age <= 17 & age > 0) {
+} else if (age <= 17 & age > 0) {
 
     let price = km * 0.21
     let sales = price - ((price * 20) / 100)
