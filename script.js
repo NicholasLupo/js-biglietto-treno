@@ -20,7 +20,7 @@ if (km == 0) {
         console.log(priceFixed + '€');
 
     // Calcolo biglietto per minori
-    } else if (age <= 17 && age > 0) {
+    } else if (age <= 17 && age >= 0) {
 
         let sales = price - ((price * 20) / 100);
         let salesFixed = sales.toFixed(2);
