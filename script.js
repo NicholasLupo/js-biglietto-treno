@@ -3,6 +3,7 @@ let km = prompt('Inserisci il numero di chilometri che vuoi percorrere');
 if (km == 0) {
 
     let km = prompt('Numero di chilometri invalido, per piacere riselezionare la distanza desiderata');
+    //Ci andrebbe un while qui, prossimamente ;)
 
 } else {
 
